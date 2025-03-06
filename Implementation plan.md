@@ -47,6 +47,12 @@ I will then validate my implementation with:
 
 assertEq(finalBalance, expectedBalance, "Swap result mismatch!");
 
+graph TD;
+    User -->|Swaps Token| CowAmmAdapter;
+    CowAmmAdapter -->|Handles LP Token| CowAMM;
+    CowAmmAdapter -->|Returns Expected Out Token| User;
+    Substreams -->|Indexes Swap Data| Analytics;
+
 Why Hire Me for this project?
 
 I have extensive experience integrating AMM protocols, including Balancer, Uniswap V3, and CoW Protocol, making me well-suited for this task. My expertise in Solidity, Substreams, and on-chain data extraction ensures an optimal and scalable solution.
