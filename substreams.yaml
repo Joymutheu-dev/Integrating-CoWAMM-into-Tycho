@@ -1,0 +1,11 @@
+package:
+  name: cowamm-substreams
+  version: v1.0.0
+network: ethereum
+modules:
+  - name: map_pools
+    kind: map
+    inputs:
+      - source: store
+    output:
+      type: pool_data
