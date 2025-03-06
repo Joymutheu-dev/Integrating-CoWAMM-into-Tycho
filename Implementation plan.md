@@ -12,17 +12,17 @@ To enable seamless swaps, I will develop a Solidity adapter that:
 - **Handles Token <-> LP Token swaps** by triggering `joinPool` and `exitPool`.  
 - **Ensures excess token conversion**, so swaps always return the expected `out_token`.  
 
-#### **Code Snippet: LP Token Swap Handling**  
+#### **LP Token Swap Handling**  
 ```solidity
 function swapLpToToken(address lpToken, address outToken, uint256 amount) external {
     (address[] memory tokens, uint256[] memory balances) = exitPool(lpToken, amount);
-    uint256 swapAmount = balances[0]; // Example: Assume USDT to USDC swap
+    uint256 swapAmount = balances[0]; // Assume USDT to USDC swap
     swap(tokens[0], outToken, swapAmount);
 }
 
-3. Substreams Package for Indexing
+### **3. Substreams Package for Indexing**
 
-I will implement a Substreams indexing package that:
+I will then implement a Substreams indexing package that:
 
 Tracks newly deployed AMM pools using ethereum-template-factory.
 
@@ -35,7 +35,7 @@ Includes pool tokens & LP tokens to track liquidity distribution.
 Runs integration tests per pool configuration, ensuring correctness.
 
 
-4. Integration Testing
+### **4. Integration Testing**
 
 I will then validate my implementation with:
 ✅ Token <-> Token swaps
@@ -43,7 +43,7 @@ I will then validate my implementation with:
 ✅ Liquidity withdrawals with rebalancing
 ✅ Zero-fee swap correctness
 
- Test Case
+ **Test Case**
 
 assertEq(finalBalance, expectedBalance, "Swap result mismatch!");
 
@@ -53,12 +53,10 @@ graph TD;
     CowAmmAdapter -->|Returns Expected Out Token| User;
     Substreams -->|Indexes Swap Data| Analytics;
 
-Why Hire Me for this project?
+**Why Hire Me for this project?**
 
 I have extensive experience integrating AMM protocols, including Balancer, Uniswap V3, and CoW Protocol, making me well-suited for this task. My expertise in Solidity, Substreams, and on-chain data extraction ensures an optimal and scalable solution.
 
-
----
 
 
 
