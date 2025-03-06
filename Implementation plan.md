@@ -51,24 +51,8 @@ Test Case
 
 assertEq(finalBalance, expectedBalance, "Swap result mismatch!");
 
-5. Graph Representation
 
-graph TD;
-    User -->|Swaps Token| CowAmmAdapter;
-    CowAmmAdapter -->|Handles LP Token| CowAMM;
-    CowAmmAdapter -->|Returns Expected Out Token| User;
-    Substreams -->|Indexes Swap Data| Analytics;
+## Why Hire Me for This Project?
 
-Why Hire Me for This Project?
-
-I have extensive experience integrating AMM protocols, including Balancer, Uniswap V3, and CoW Protocol, making me well-suited for this task. My expertise in:
-
-Solidity Development
-
-Substreams Indexing
-
-On-Chain Data Extraction
-
-
-ensures an optimal and scalable solution for your project.
+I have extensive experience integrating AMM protocols, including Balancer, Uniswap V3, and CoW Protocol, making me well-suited for this task. My expertise in: Solidity Development, Substreams Indexing, and On-Chain Data Extraction ensures an optimal and scalable solution for this project.
 
